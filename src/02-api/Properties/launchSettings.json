@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "WebApi": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "launchUrl": "weatherforecast",
+      "applicationUrl": "https://localhost:6001;http://localhost:6000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+
+        "COR_ENABLE_PROFILING": "1",
+        "COR_PROFILER": "{846F5F1C-F9AE-4B07-969E-05C26BC060D8}",
+
+        "CORECLR_ENABLE_PROFILING": "1",
+        "CORECLR_PROFILER": "{846F5F1C-F9AE-4B07-969E-05C26BC060D8}",
+
+        "DD_LOGS_INJECTION": "true",
+        "DD_RUNTIME_METRICS_ENABLED": "true",
+
+        "DD_TRACE_AGENT_URL": "http://localhost:8126",
+
+        "DD_ENV": "development",
+        "DD_SERVICE": "webapi",
+        "DD_VERSION": "V1"
+      }
+    }
+  }
+}

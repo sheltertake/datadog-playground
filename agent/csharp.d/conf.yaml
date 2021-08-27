@@ -1,0 +1,75 @@
+init_config:
+
+instances:
+
+##Log section
+logs:
+
+  - type: file
+    path: C:\GITHUB\datadog-playground\src\01-console\bin\Debug\net5.0\logs\*.txt
+    service: consoleapp
+    source: csharp
+    sourcecategory: sourcecode
+
+  - type: file
+    path: C:\GITHUB\datadog-playground\src\02-api\logs\*.txt
+    service: webapi
+    source: csharp
+    sourcecategory: sourcecode
+
+  - type: file
+    path: C:\temp\tico-k8s-logs\football-addresses\*.txt
+    service: football-addresses
+    version: v1
+    source: csharp
+    sourcecategory: sourcecode    
+
+  - type: file
+    path: C:\temp\tico-k8s-logs\football-charts\*.txt
+    service: football-charts
+    version: v1
+    source: csharp
+    sourcecategory: sourcecode
+
+  - type: file
+    path: C:\temp\tico-k8s-logs\football-organizations\*.txt
+    service: football-organizations
+    version: v1
+    source: csharp
+    sourcecategory: sourcecode
+
+  - type: file
+    path: C:\temp\tico-k8s-logs\football-contacts\*.txt
+    service: football-contacts
+    version: v1
+    source: csharp
+    sourcecategory: sourcecode
+  
+  - type: file
+    path: C:\temp\tico-k8s-logs\time-contacts\*.txt
+    service: time-contacts
+    version: v1
+    source: csharp
+    sourcecategory: sourcecode
+
+  - type: file
+    path: C:\VSTS\FBS\WebApp\TIME.TIVA\src\FBS.Time.TIVA.Http\application-logs.json
+    service: tiva
+    source: csharp
+    sourcecategory: sourcecode
+    # For multiline logs, if they start by the date with the format yyyy-mm-dd uncomment the following processing rule
+    #log_processing_rules:
+    #  - type: multi_line
+    #    name: new_log_start_with_date
+    #    pattern: \d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])
+    
+  - type: file
+    path: C:\VSTS\FBS\Unity\TIVA.Api\src\TIVA.Host\tiva-api-log*.txt
+    service: tiva-api
+    source: csharp
+    sourcecategory: sourcecode
+    # For multiline logs, if they start by the date with the format yyyy-mm-dd uncomment the following processing rule
+    #log_processing_rules:
+    #  - type: multi_line
+    #    name: new_log_start_with_date
+    #    pattern: \d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])
